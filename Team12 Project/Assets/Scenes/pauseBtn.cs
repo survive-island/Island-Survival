@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class pauseBtn : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool isSettings = false;
     public GameObject pauseMenuUI;
-    public GameObject playUI;
+    public GameObject defaultPanelUI;
+    public GameObject settingCanvasUI;
  
     // Use this for initialization
     void Start () {
@@ -23,6 +25,28 @@ public class pauseBtn : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void changeSettings() {
+        if(isSettings) {
+            playMode();
+        }
+        else {
+            settingMode();
+        }
+    }
+    void settingMode() {
+        defaultPanelUI.SetActive(false);
+        settingCanvasUI.SetActive(true);
+        Time.timeScale = 0f;
+        isSettings = true;
+
+    }
+
+    void playMode() {
+        defaultPanelUI.SetActive(true);
+        settingCanvasUI.SetActive(false);
+        Time.timeScale = 1f;
+        isSettings = false;
+    }
 
     public void pausePlay() {
             if(GameIsPaused) {
@@ -34,15 +58,15 @@ public class pauseBtn : MonoBehaviour
     }
 
     void Resume() {
+        defaultPanelUI.SetActive(true);
         pauseMenuUI.SetActive(false);
-        playUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     void Pause() {
+        defaultPanelUI.SetActive(false);
         pauseMenuUI.SetActive(true);
-        playUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
