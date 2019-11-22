@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: River
   m_Shader: {fileID: 4800000, guid: 77f9e5f353f368743bdad57d76181f42, type: 3}
   m_ShaderKeywords: _BLENDENABLETHIS_ON _SECONDARYENABLETHIS_ON
@@ -121,8 +122,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.37034482, g: 0.634, b: 0.29999998, a: 0.884}
-    - _BlendColor: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 0.8160377, g: 0.9281982, b: 1, a: 0.75686276}
+    - _BlendColor: {r: 0.81568635, g: 0.9294118, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CubemapBaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
