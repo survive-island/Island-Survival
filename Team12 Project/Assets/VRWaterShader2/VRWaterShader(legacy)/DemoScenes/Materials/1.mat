@@ -4,10 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: 1
-  m_Shader: {fileID: 4800000, guid: 4a2d0ef71f180834aa9a4deb63f6e613, type: 3}
+  m_Shader: {fileID: 4800000, guid: 77f9e5f353f368743bdad57d76181f42, type: 3}
   m_ShaderKeywords: _SECONDARYENABLETHIS_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -121,7 +122,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.29999998, g: 0.5, b: 0.9, a: 0.5}
+    - _BaseColor: {r: 0.3254902, g: 0.3921569, b: 0.4901961, a: 0.5}
     - _BlendColor: {r: 0, g: 0.6442697, b: 0.7720588, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CubemapBaseColor: {r: 1, g: 1, b: 1, a: 1}
