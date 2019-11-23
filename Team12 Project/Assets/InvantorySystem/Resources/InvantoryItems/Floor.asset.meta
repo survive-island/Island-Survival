@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: fc45d8d2a0fdb4a4899626e5431c0bf2
+labels:
+- InventoryItem
+- ScriptableObject
+- SimpleInventoryBar
+timeCreated: 1474978283
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
