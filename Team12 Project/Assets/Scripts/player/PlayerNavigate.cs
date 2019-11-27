@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class navigate : MonoBehaviour
+public class PlayerNavigate : MonoBehaviour
 {
     public int playerSpeed = 2;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
