@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minimapCam : MonoBehaviour
-{
+public class minimapCamera : MonoBehaviour
+{   
     public GameObject player;
+    private Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.rotation = Quaternion.Euler(0, 90, 0);
+        offset = transform.position - player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = player.transform.position;
+        transform.position = player.transform.position + offset;
+        transform.rotation = Quaternion.Euler(90, 0, 0);
     }
 }
