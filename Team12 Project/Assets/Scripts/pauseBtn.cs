@@ -24,6 +24,7 @@ public class pauseBtn : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Resume();
     }
     public void changeSettings() {
         if(isSettings) {
