@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
-  - minimapCamera
+  - Resource
+  - Container
+  - CraftableItem
+  - Interactable
+  - Terrain
+  - Trader
   layers:
   - Default
   - TransparentFX
@@ -15,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - userIcon
-  - 
-  - 
+  - CraftableItem
+  - Player
+  - Gajos
   - 
   - 
   - 
