@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 407458470838638646}
   - component: {fileID: 1544265947690432357}
   - component: {fileID: 4711419071867513643}
+  - component: {fileID: -6391668211262866844}
   m_Layer: 0
   m_Name: CanSlot
   m_TagString: Untagged
@@ -347,14 +348,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Use
-        m_Mode: 1
+      - m_Target: {fileID: 2873972322188954361, guid: 5ac845c87b0d747fca80e9ff1b79c212,
+          type: 3}
+        m_MethodName: putItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8783489004444713540}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-6391668211262866844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783489004444713540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e51c45e2618b0428ee5b4c3b234b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 3342e16862d0a4cd6918c2c523f9a457, type: 2}

@@ -7,9 +7,12 @@ public class pauseBtn : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public static bool isSettings = false;
+    public static bool isCombination = false;
+
     public GameObject pauseMenuUI;
     public GameObject defaultPanelUI;
     public GameObject settingCanvasUI;
+    public GameObject combiPanelUI;
  
     // Use this for initialization
     void Start () {
@@ -26,6 +29,7 @@ public class pauseBtn : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         Resume();
     }
+
     public void changeSettings() {
         if(isSettings) {
             playMode();
@@ -34,6 +38,7 @@ public class pauseBtn : MonoBehaviour
             settingMode();
         }
     }
+
     void settingMode() {
         defaultPanelUI.SetActive(false);
         settingCanvasUI.SetActive(true);
@@ -45,8 +50,10 @@ public class pauseBtn : MonoBehaviour
     void playMode() {
         defaultPanelUI.SetActive(true);
         settingCanvasUI.SetActive(false);
+        combiPanelUI.SetActive(false);
         Time.timeScale = 1f;
         isSettings = false;
+        isCombination = false;
     }
 
     public void pausePlay() {
@@ -70,5 +77,24 @@ public class pauseBtn : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void combinationStart()
+    {
+        if(isCombination)
+        {
+            playMode();
+        }
+        else
+        {
+            combiMode();
+        }
+    }
+    void combiMode()
+    {
+        defaultPanelUI.SetActive(false);
+        combiPanelUI.SetActive(true);
+        Time.timeScale = 0f;
+        isCombination = true;
     }
 }

@@ -117,11 +117,28 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 162863292539631640, guid: fc6d7156d64972c49a1bab01f02952f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4924608760173655657, guid: 5ac845c87b0d747fca80e9ff1b79c212,
+        type: 3}
+    - target: {fileID: 162863292539631640, guid: fc6d7156d64972c49a1bab01f02952f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: putItem
+      objectReference: {fileID: 0}
     - target: {fileID: 672885106903290581, guid: fc6d7156d64972c49a1bab01f02952f0,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 26de841f6d53c6a4da359d956be2c4f4,
         type: 3}
+    - target: {fileID: 1210924254413563571, guid: fc6d7156d64972c49a1bab01f02952f0,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 35c088d2ce486457f9bba4fb51e5cd83,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6d7156d64972c49a1bab01f02952f0, type: 3}

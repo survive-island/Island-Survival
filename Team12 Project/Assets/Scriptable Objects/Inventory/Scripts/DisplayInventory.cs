@@ -53,8 +53,8 @@ public class DisplayInventory : MonoBehaviour
     public Vector3 GetPosition(int i)
     {
         if (i < 6)
-            return new Vector3(-5.07f + 2*i, 1.4f, 0f);
+            return new Vector3(-4.37f + 2*i, 4.54f, 0f);
         else
-            return new Vector3(-5.07f + 2*(i-6), -1f, 0f);
+            return new Vector3(-4.37f + 2*(i-6), 2.7f, 0f);
     }
 }
