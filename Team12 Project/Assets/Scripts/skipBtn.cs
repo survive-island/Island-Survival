@@ -33,11 +33,13 @@ public class skipBtn : MonoBehaviour
             showMission(missionNum);
             missionNum += 1;
         }
+        missionNum = 0; //(다원추가)restart할 때 다시 시작하게 하기위해
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
 
     void showMission(int i) {
