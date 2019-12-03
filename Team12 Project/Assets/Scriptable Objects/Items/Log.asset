@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Log
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  type: 2
+  type: 1
   description: This is a log of a tree.

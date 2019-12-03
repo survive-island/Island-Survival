@@ -8,12 +8,15 @@ public class PlayerCombination : MonoBehaviour
 
     public void putItem(GameObject gameobject)
     {
-        var item = gameobject.GetComponent<Item>();
-        if (item)
+        if (pauseBtn.isCombination)
         {
-            combi.AddItem(item.item, 1);
-            //Destroy(gameobject);
-            Debug.Log(gameobject.name);
+            var item = gameobject.GetComponent<Item>();
+            if (item)
+            {
+                combi.AddItem(item.item, 1);
+                //Destroy(gameobject);
+                Debug.Log(gameobject.name);
+            }
         }
     }
     private void OnApplicationQuit()

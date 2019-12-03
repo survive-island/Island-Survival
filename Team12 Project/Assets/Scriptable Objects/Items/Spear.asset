@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c2eba1075354d488b79bcc3da55824, type: 3}
-  m_Name: TorchSlot
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4342815001773797922, guid: 1ba0dd6d66707724e9eed2ce4f1bf309, type: 3}
+  prefab: {fileID: 6801028021078938545, guid: c050dcc9001105643951eea7dd525c0b, type: 3}
   type: 1
-  description: 
+  description: This is a spear, You can use this on fish to get a fish.
   use: 0

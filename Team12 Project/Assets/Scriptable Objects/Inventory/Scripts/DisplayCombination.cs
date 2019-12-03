@@ -26,7 +26,7 @@ public class DisplayCombination : MonoBehaviour
             if (itemsDisplayed.ContainsKey(combi.Container[i]))
             //if item is in combination box
             {
-                itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+               // itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
             }
             else
             {
@@ -34,7 +34,7 @@ public class DisplayCombination : MonoBehaviour
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 obj.GetComponent<RectTransform>().localScale = new Vector3(16.5f, 14f, 1f);
                 obj.GetComponent<RectTransform>().localEulerAngles = new Vector3(0f, 0f, 0f);
-                obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+               // obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
                 itemsDisplayed.Add(combi.Container[i], obj);
             }
         }
@@ -48,7 +48,7 @@ public class DisplayCombination : MonoBehaviour
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponent<RectTransform>().localScale = new Vector3(16.5f, 14f, 1f);
             obj.GetComponent<RectTransform>().localEulerAngles = new Vector3(0f, 0f, 0f);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+           // obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
             itemsDisplayed.Add(combi.Container[i], obj);
         }
     }
