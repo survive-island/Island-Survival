@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37327ba2c6d4474f93a77a4c304f3c6, type: 3}
   m_Name: Log
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  type: 1
+  prefab: {fileID: 2677354945282190052, guid: 4516fe25d84f1ab418a9ffe5457c5d50, type: 3}
+  type: 2
   description: This is a log of a tree.
