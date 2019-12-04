@@ -25,15 +25,19 @@ public class skipBtn : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("start mission num");
+        Debug.Log(missionNum);
         if(missionNum == 0) {
             missionNum += 1;
             showTutorial(tutorialNum);
         }
         else {
-            showMission(missionNum);
             missionNum += 1;
+            showMission(missionNum);
         }
-        missionNum = 0; //(다원추가)restart할 때 다시 시작하게 하기위해
+        Debug.Log("end mission num");
+        Debug.Log(missionNum);
+        // missionNum = 0; //(다원추가)restart할 때 다시 시작하게 하기위해
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class skipBtn : MonoBehaviour
 
     void showMission(int i) {
         // missionInstText = missionInstPanel.GetComponent<Text>();
+        missionInstPanel.SetActive(true);
         missionInstText.text = missionExplain[i - 1];
     }
 
