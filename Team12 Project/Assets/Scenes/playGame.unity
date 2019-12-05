@@ -7841,8 +7841,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 529806756}
-        m_MethodName: Reset
+      - m_Target: {fileID: 529806757}
+        m_MethodName: clickResetBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9585,12 +9585,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1001 &399841253
 PrefabInstance:
@@ -13408,6 +13408,7 @@ MonoBehaviour:
   failUI: {fileID: 0}
   successUI: {fileID: 0}
   combi: {fileID: 11400000, guid: 97441cad5cd3b450b838eb8d9f79f217, type: 2}
+  combiPanel: {fileID: 529806754}
 --- !u!114 &529806757
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,51 +7,60 @@ public class DisplayCombination : MonoBehaviour
 {
     public CombinationObject combi;
     Dictionary<CombinationSlot, GameObject> itemsDisplayed = new Dictionary<CombinationSlot, GameObject>();
-
-    void Start()
-    {
-        CreateDisplay();
-    }
+    bool isClickedReset = false;
 
     // Update is called once per frame
     void Update()
-    {
-        UpdateDisplay();
+    {   
+        if(PlayerCombination.invenItemClicked) {
+            UpdateDisplay();
+            PlayerCombination.invenItemClicked = false;
+        }
     }
 
     public void UpdateDisplay()
-    {
-        for (int i = 0; i < 3; i++) //combi.Container.Count = 3
-        {
-            if (itemsDisplayed.ContainsKey(combi.Container[i]))
-            //if item is in combination box
-            {
-               // itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+    {   
+        if(isClickedReset) {
+            Debug.Log("clicked reset boolean = ");
+            Debug.Log(isClickedReset);
+            isClickedReset = false;
+            int cnt = itemsDisplayed.Count;
+            Debug.Log("start!");
+            
+            for(int i = 0; i < cnt; i++) {
+                Debug.Log("combi container count = ");
+                Debug.Log(combi.Container.Count);
+                Destroy(itemsDisplayed[combi.Container[0]]);
+                combi.Container.RemoveAt(0);
             }
-            else
-            {
-                var obj = Instantiate(combi.Container[i].item.prefab, new Vector3(0f, 0f, 0f), Quaternion.identity, transform);
-                obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                obj.GetComponent<RectTransform>().localScale = new Vector3(16.5f, 14f, 1f);
-                obj.GetComponent<RectTransform>().localEulerAngles = new Vector3(0f, 0f, 0f);
-               // obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
-                itemsDisplayed.Add(combi.Container[i], obj);
+
+            Debug.Log(isClickedReset);
+        } else {
+            Debug.Log("container add?");
+            if(combi.Container.Count != 0) {
+                for (int i = 0; i < combi.Container.Count; i++) //combi.Container.Count = 3
+                {
+                    if (itemsDisplayed.ContainsKey(combi.Container[i])) {
+                        itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+                    } else {
+                        var obj = Instantiate(combi.Container[i].item.prefab, new Vector3(0f, 0f, 0f), Quaternion.identity, transform);
+                        obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
+                        obj.GetComponent<RectTransform>().localScale = new Vector3(16.5f, 14f, 1f);
+                        obj.GetComponent<RectTransform>().localEulerAngles = new Vector3(0f, 0f, 0f);
+                    // obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+                        itemsDisplayed.Add(combi.Container[i], obj);
+                    }
+                }
             }
         }
     }
 
-    public void CreateDisplay()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            var obj = Instantiate(combi.Container[i].item.prefab, new Vector3(0f, 0f, 0f), Quaternion.identity, transform);
-            obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponent<RectTransform>().localScale = new Vector3(16.5f, 14f, 1f);
-            obj.GetComponent<RectTransform>().localEulerAngles = new Vector3(0f, 0f, 0f);
-           // obj.GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
-            itemsDisplayed.Add(combi.Container[i], obj);
-        }
+    public void clickResetBtn() {
+        Debug.Log("here");
+        isClickedReset = true;
+        UpdateDisplay();
     }
+
     public Vector3 GetPosition(int i)
     {
         //if (i < 3)

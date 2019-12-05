@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Fuse : MonoBehaviour
@@ -12,6 +13,7 @@ public class Fuse : MonoBehaviour
     public GameObject failUI;
     public GameObject successUI;
     public CombinationObject combi;
+    public GameObject combiPanel;
 
     public void ChangeScene(string sceneName)
     {
@@ -20,15 +22,7 @@ public class Fuse : MonoBehaviour
 
     public void Reset()
     {
-        if (isResetting)
-        {
-            Time.timeScale = 1f;
-            isResetting = false;
-        }
-        else
-        {
-            ClearAll();
-        }
+        ClearAll();
     }
 
     public void Compose()
@@ -48,13 +42,16 @@ public class Fuse : MonoBehaviour
 
     private void ClearAll()
     {
-        // 아까 만든거 저장해둔 리스트에서 모두 삭제해줍니다.
-        for (int i = 0; i < 3; i++)
-        {
-            Destroy(combi.Container[i].item);
-            combi.Container.RemoveAt(i);
-        }
         combi.Container.Clear();
+        // 아까 만든거 저장해둔 리스트에서 모두 삭제해줍니다.
+        for (int i = 0; i < combi.Container.Count; i++)
+        {
+            Destroy(combi.Container[i].item, 1);
+            // Destroy(combiPanel.FindObjectByType(typeof(ItemObject)));
+            // Debug.Log("tempObj is in? ");
+            // Debug.Log(combi.Container[i].item);
+            // combi.Container.RemoveAt(i);
+        }
 
         Time.timeScale = 0f;
         isResetting = true;
