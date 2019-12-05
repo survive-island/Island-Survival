@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class hpBar : MonoBehaviour
 {
-    Image healthBar;
+    Image healthBar; // Reference to an image to flash on the screen
     public Text healthText;
     float maxHealth = 100f;
-    public static float health;
+    public static float health; // current health the player has.
 
     // Start is called before the first frame update
     void Start()

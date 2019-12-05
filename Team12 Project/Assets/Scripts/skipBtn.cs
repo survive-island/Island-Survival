@@ -25,18 +25,17 @@ public class skipBtn : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("start mission num");
-        Debug.Log(missionNum);
+        Debug.Log("start mission num = " + missionNum);
         if(missionNum == 0) {
             missionNum += 1;
             showTutorial(tutorialNum);
+            // Debug.Log("mission Num = " + missionNum);
         }
         else {
             missionNum += 1;
             showMission(missionNum);
         }
-        Debug.Log("end mission num");
-        Debug.Log(missionNum);
+        Debug.Log("end mission num = " + missionNum);
         // missionNum = 0; //(다원추가)restart할 때 다시 시작하게 하기위해
     }
 
