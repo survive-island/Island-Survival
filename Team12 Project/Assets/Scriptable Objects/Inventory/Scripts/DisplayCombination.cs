@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class DisplayCombination : MonoBehaviour
 {
@@ -41,7 +40,7 @@ public class DisplayCombination : MonoBehaviour
                 for (int i = 0; i < combi.Container.Count; i++) //combi.Container.Count = 3
                 {
                     if (itemsDisplayed.ContainsKey(combi.Container[i])) {
-                        itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
+                       // itemsDisplayed[combi.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = combi.Container[i].amount.ToString("n0");
                     } else {
                         var obj = Instantiate(combi.Container[i].item.prefab, new Vector3(0f, 0f, 0f), Quaternion.identity, transform);
                         obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
