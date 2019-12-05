@@ -7,7 +7,7 @@ public class PlayerInventory : MonoBehaviour
     public InventoryObject inventory;
     public GameObject myHand;
     public GameObject error;
-    public static bool haveStick=false;
+    public static bool haveStick = false;
 
     public void putItem(GameObject gameobject)
     {
@@ -16,7 +16,6 @@ public class PlayerInventory : MonoBehaviour
         {
             inventory.AddItem(item.item, 1);
             Destroy(gameobject);
-        
         }
     }
     public void useItem(GameObject gameobject)
@@ -29,11 +28,20 @@ public class PlayerInventory : MonoBehaviour
             item.GetComponent<Rigidbody>().useGravity = false;
             item.transform.SetParent(myHand.transform);
             item.transform.localPosition = new Vector3(0.006799746f, -0.03290001f, 0.02729985f);//put it under arms
-            item.transform.localRotation = Quaternion.Euler(-8.024f,-159.681f,-360.021f);
+            item.transform.localRotation = Quaternion.Euler(-8.024f, -159.681f, -360.021f);
             item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX |
                 RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
             haveStick = true;
         }
+    }
+
+    public void saveGame()
+    {
+        inventory.Save();
+    }
+    public void loadGame()
+    {
+        inventory.Load();
     }
 
     public void pickFish(GameObject gameobject)
@@ -52,7 +60,7 @@ public class PlayerInventory : MonoBehaviour
             item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX |
                 RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
         }
-        else if (item&&!haveStick)
+        else if (item && !haveStick)
         {
             messageState.messageNum = 1;
             error.SetActive(true);
@@ -61,6 +69,6 @@ public class PlayerInventory : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-      inventory.Container.Clear();
+        inventory.Container.Clear();
     }
 }

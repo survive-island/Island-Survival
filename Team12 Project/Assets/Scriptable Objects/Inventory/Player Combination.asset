@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Player Combination
   m_EditorClassIdentifier: 
   Container: []
+  database: {fileID: 11400000, guid: cd7c1bdb2f70f4744b8e41384ffaebf1, type: 2}

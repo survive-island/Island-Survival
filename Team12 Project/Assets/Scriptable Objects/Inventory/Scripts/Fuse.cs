@@ -7,53 +7,82 @@ using UnityEngine.SceneManagement;
 
 public class Fuse : MonoBehaviour
 {
-    public static bool isResetting = false;
-    public static bool isFusing = false;
+    public static List<int> oneList = new List<int>();
+    public static List<int> twoList = new List<int>();
 
     public GameObject failUI;
     public GameObject successUI;
     public CombinationObject combi;
     public GameObject combiPanel;
 
+    public void Start()
+    {
+        //board, fence
+        oneList.Add(0);
+        oneList.Add(2);
+        //fence, fish, spear
+        twoList.Add(2);
+        twoList.Add(3);
+        twoList.Add(8);
+    }
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-
-    public void Reset()
-    {
-        ClearAll();
-    }
-
+  
     public void Compose()
     {
-        if (isFusing)
+        bool pass = false;
+        
+        pass = CheckListEquals(CombinationObject.ContList, oneList);
+        if (pass == true)
         {
-            Time.timeScale = 1f;
-            isFusing = false;
+            Debug.Log("success!");
         }
         else
         {
-            //조건문에 따라 판별해
-            Time.timeScale = 0f;
-            isFusing = true;
+            pass = CheckListEquals(CombinationObject.ContList, twoList);
+            if (pass == true)
+            {
+                Debug.Log("success!!");
+            }
+            else
+            {
+                Debug.Log("fail......");
+            }
         }
     }
 
-    private void ClearAll()
+    bool CheckListEquals(List<int> value, List<int> tempValue)
     {
-        combi.Container.Clear();
-        // 아까 만든거 저장해둔 리스트에서 모두 삭제해줍니다.
-        for (int i = 0; i < combi.Container.Count; i++)
-        {
-            Destroy(combi.Container[i].item, 1);
-            // Destroy(combiPanel.FindObjectByType(typeof(ItemObject)));
-            // Debug.Log("tempObj is in? ");
-            // Debug.Log(combi.Container[i].item);
-            // combi.Container.RemoveAt(i);
-        }
+        bool isEqual = true;
 
-        Time.timeScale = 0f;
-        isResetting = true;
+        if (object.ReferenceEquals(value, tempValue))
+        {
+            //같은 인스턴스면 true
+            isEqual = true;
+            Debug.Log("equal is true");
+        }
+        else if (value == null || tempValue == null || value.Count != tempValue.Count)
+        {
+            //어느 한 쪽이 null이거나, 요소의 수가 다를 때는 false
+            isEqual = false;
+            Debug.Log("eqaul is false");
+        }
+        else
+        {
+            //1개 1개씩 요소 비교
+            for (int i = 0; i < value.Count; i++)
+            {
+                //ary1의 요소의 Equals메소드에서, ary2의 요소와 같은지를 비교
+                if (!value[i].Equals(tempValue[i]))
+                {
+                    //1개라도 같지 않은 요소가 있으면 false
+                    isEqual = false;
+                    break;
+                }
+            }
+        }
+        return isEqual;
     }
 }
