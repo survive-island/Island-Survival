@@ -9,7 +9,6 @@ public class LoadScene : MonoBehaviour
 
     public void LoadingScene(string sceneName)
     {
-        skipBtn.missionNum = 2;
         SceneManager.LoadScene(sceneName);
         inventory.Load();
     }
