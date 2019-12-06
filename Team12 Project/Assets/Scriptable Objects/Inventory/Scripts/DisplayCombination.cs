@@ -31,6 +31,7 @@ public class DisplayCombination : MonoBehaviour
                 Debug.Log(combi.Container.Count);
                 Destroy(itemsDisplayed[combi.Container[0]]);
                 combi.Container.RemoveAt(0);
+                CombinationObject.ContList.RemoveAt(0);
             }
 
             Debug.Log(isClickedReset);
