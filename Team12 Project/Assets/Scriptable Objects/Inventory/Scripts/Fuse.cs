@@ -14,6 +14,8 @@ public class Fuse : MonoBehaviour
     public GameObject successUI;
     public CombinationObject combi;
     public GameObject combiPanel;
+    public static bool isMissionFail = false;
+    public static bool isMissionSuccess = false;
 
     public void ChangeScene(string sceneName)
     {
@@ -31,6 +33,7 @@ public class Fuse : MonoBehaviour
             if (pass == true)
             {
                 Debug.Log("success @ O @");
+                isMissionSuccess = true;
             }
             else
             {
@@ -38,10 +41,12 @@ public class Fuse : MonoBehaviour
                 if (pass == true)
                 {
                     Debug.Log("success @ O @");
+                    isMissionSuccess = true;
                 }
                 else
                 {
                     Debug.Log("fail T _ T");
+                    isMissionFail = true;
                 }
             }
         }

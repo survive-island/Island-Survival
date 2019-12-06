@@ -9,7 +9,8 @@ public class minimapCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        // offset = transform.position - player.transform.position;
+        offset = new Vector3(0, 70,0);
     }
 
     // Update is called once per frame

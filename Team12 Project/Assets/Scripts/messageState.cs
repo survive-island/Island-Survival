@@ -7,7 +7,7 @@ using TMPro;
 public class messageState : MonoBehaviour
 {
     public static int messageNum=0;
-    public TextMeshProUGUI text;
+    public Text text;
 
     void Start()
     {
