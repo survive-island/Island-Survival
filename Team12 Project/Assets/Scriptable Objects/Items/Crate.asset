@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Crate
   m_EditorClassIdentifier: 
   prefab: {fileID: 8214864156529984792, guid: d80d97ac1f369684980182d96849dc80, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Crate
+  description: A wooden box.

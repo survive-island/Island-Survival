@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4342815001773797922, guid: 1ba0dd6d66707724e9eed2ce4f1bf309, type: 3}
   type: 1
+  ItemName: Torch
   description: You can use this torch to make some fire!
   use: 0

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Bucket
   m_EditorClassIdentifier: 
   prefab: {fileID: 677737621408550959, guid: 20ec1582a03e4fc488b797d6f9410c44, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Bucket
+  description: A bucket, to hold some stuffs in it.

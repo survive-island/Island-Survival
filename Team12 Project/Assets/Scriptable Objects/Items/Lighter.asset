@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Lighter
   m_EditorClassIdentifier: 
   prefab: {fileID: 3693496278669902541, guid: e17f88d52eba078489085c7e641e219c, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Lighter
+  description: A lighter. You can get fire from this.

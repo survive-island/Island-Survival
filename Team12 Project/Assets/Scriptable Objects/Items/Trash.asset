@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Trash
   m_EditorClassIdentifier: 
   prefab: {fileID: 8490951457852304880, guid: dfa90dc6bd5a44d499b51553deadd2bc, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Trash Bag
+  description: A trash bag. There are some trash inside this bag!

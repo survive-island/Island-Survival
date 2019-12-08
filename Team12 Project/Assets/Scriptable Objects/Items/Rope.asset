@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Rope
   m_EditorClassIdentifier: 
   prefab: {fileID: 8045370944764230490, guid: db6fde3ee57054648bdd86c81f16b08a, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Rope
+  description: A rope. You may hold some objects with this.

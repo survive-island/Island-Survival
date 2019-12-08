@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4235056369068511607, guid: fc6d7156d64972c49a1bab01f02952f0, type: 3}
   type: 1
+  ItemName: Knife
   description: You can use this knife for cutting things.
   use: 0

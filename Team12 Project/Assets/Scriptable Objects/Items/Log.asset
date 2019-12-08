@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Log
   m_EditorClassIdentifier: 
   prefab: {fileID: 2677354945282190052, guid: 4516fe25d84f1ab418a9ffe5457c5d50, type: 3}
-  type: 2
+  type: 1
+  ItemName: Log
   description: This is a log of a tree.

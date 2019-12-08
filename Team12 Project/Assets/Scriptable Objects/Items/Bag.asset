@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Bag
   m_EditorClassIdentifier: 
   prefab: {fileID: 2865778191637949417, guid: 21a3f1cce29a71f4a9e1c9baa7bc4f1e, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Bag
+  description: This is a bag, you can put something inside.

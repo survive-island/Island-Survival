@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: FlintOne
   m_EditorClassIdentifier: 
   prefab: {fileID: 270116851894186937, guid: 31ca747cdd79b8a48895d2bff34e6777, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Flint Stone (1)
+  description: A flint stone to make some fire. You need two stones to use them.

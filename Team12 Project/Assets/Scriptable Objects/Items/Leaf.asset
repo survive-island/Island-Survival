@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Leaf
   m_EditorClassIdentifier: 
   prefab: {fileID: 793800583863131659, guid: 1e887a2dbc4a0dc439e3456093e98370, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Leaf
+  description: This is a leaf from a tree.

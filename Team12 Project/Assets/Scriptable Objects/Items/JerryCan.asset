@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: JerryCan
   m_EditorClassIdentifier: 
   prefab: {fileID: 6220574823487072088, guid: d35a2f832cb5a394fac3f844ae2b4853, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Jerry Can
+  description: An empty jerry can. This is a container to put liquids in it.

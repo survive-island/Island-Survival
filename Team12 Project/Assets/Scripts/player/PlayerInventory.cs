@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -8,6 +9,20 @@ public class PlayerInventory : MonoBehaviour
     public GameObject myHand;
     public GameObject error;
     public static bool haveStick = false;
+
+    private static GameObject tooltip;
+    public GameObject tooltipObject;
+    public TextMeshProUGUI sizeTextObject;
+    private static TextMeshProUGUI sizeText;
+    public TextMeshProUGUI visualTextObject;
+    private static TextMeshProUGUI visualText;
+
+    void Start()
+    {
+        tooltip = tooltipObject;
+        sizeText = sizeTextObject;
+        visualText = visualTextObject;
+    }
 
     public void putItem(GameObject gameobject)
     {
@@ -18,6 +33,20 @@ public class PlayerInventory : MonoBehaviour
             Destroy(gameobject);
         }
     }
+
+    public void showToolTip(GameObject slot)//for hovering 
+    {
+        var slot_info = slot.GetComponent<Item>();
+            visualText.text = slot_info.item.GetTooltip();
+            sizeText.text = visualText.text;
+            tooltip.SetActive(true);
+    }
+
+    public void hideToolTip()
+    {
+        tooltip.SetActive(false);
+    }
+
     public void useItem(GameObject gameobject)
     {
         var item = gameobject.GetComponent<Item>();

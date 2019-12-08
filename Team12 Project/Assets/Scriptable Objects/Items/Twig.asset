@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Twig
   m_EditorClassIdentifier: 
   prefab: {fileID: 8590479139057000973, guid: 7e9ab52d0861e7d43878a67015f820f6, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Wood Twig
+  description: 'A wood twig from a tree. '

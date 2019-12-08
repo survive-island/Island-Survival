@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   prefab: {fileID: 3030255847484689858, guid: 0fa5823bfd996814d9447908e821a20c, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Rock
+  description: A rock. Hard and strong.

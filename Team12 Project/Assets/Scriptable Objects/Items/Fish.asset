@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   prefab: {fileID: 3247739259552435743, guid: 8881e0090570f3c4ca8887e31be26cf9, type: 3}
-  type: 2
-  description: You can eat them with fire!
+  type: 1
+  ItemName: Fish
+  description: A fish. You may be able to eat this fish with a fire!

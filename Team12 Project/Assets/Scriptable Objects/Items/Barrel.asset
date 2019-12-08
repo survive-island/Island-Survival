@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Barrel
   m_EditorClassIdentifier: 
   prefab: {fileID: 6736238499399333966, guid: 6db72df503d2fde45a0184f59cfa9d84, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Barrel
+  description: This is a barrel, maybe holding wines inside !

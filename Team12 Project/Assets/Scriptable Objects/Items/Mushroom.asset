@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mushroom
   m_EditorClassIdentifier: 
   prefab: {fileID: 2899967481984274421, guid: 0e78ae0c8fb325749a0cc66ab7b680fe, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Mushroom
+  description: 'A Mushroom you can eat! '

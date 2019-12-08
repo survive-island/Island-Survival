@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Nail
   m_EditorClassIdentifier: 
   prefab: {fileID: 4925413298749223176, guid: 9f75a694fdcf3d34c8505117f15bdc7f, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Nail
+  description: A nail to nail down some objects.

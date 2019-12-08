@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MatchBox
   m_EditorClassIdentifier: 
   prefab: {fileID: 5367424176765363761, guid: 64ba2ecba26b53d4fbb625846b39ad09, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Match Box
+  description: A Match Box that has matches in it. You can get fire!

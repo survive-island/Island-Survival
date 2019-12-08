@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SmallCan
   m_EditorClassIdentifier: 
   prefab: {fileID: 8783489004444713540, guid: 79d6a29eb2ba6574dabc85645dc25441, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Can
+  description: A small tin can.

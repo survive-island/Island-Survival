@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   prefab: {fileID: 4727771496199478381, guid: 67d1d5755780dbd498036799f00661a8, type: 3}
-  type: 2
+  type: 1
+  ItemName: Hammer
   description: This is a steel hammer.

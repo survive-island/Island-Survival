@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fence
   m_EditorClassIdentifier: 
   prefab: {fileID: 6775102365830359417, guid: 4da84cdcf46351f4d81993ea8e9263f9, type: 3}
-  type: 2
+  type: 1
+  ItemName: Wood Fence
   description: A wooden piece broken from a fence.

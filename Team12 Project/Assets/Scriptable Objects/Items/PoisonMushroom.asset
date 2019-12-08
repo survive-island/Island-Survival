@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PoisonMushroom
   m_EditorClassIdentifier: 
   prefab: {fileID: 7087080966940468614, guid: 8e5b2148367d5c34ab0ff826ed363f04, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Poison Mushroom
+  description: A mushroom which has poison in it. You can eat them, but........

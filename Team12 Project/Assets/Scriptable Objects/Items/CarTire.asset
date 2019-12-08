@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CarTire
   m_EditorClassIdentifier: 
   prefab: {fileID: 150079785327501223, guid: 9e13f7e117d84444bbcd5ce33cad9c1f, type: 3}
-  type: 2
-  description: 
+  type: 1
+  ItemName: Car Tire
+  description: 'This is a large tire from a car. '
