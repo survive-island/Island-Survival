@@ -27,7 +27,9 @@ public class skipBtn : MonoBehaviour
     {
         Debug.Log("start mission num = " + missionNum);
         if (missionNum == 0)
-        {              missionNum += 1;             showTutorial(tutorialNum);
+        { 
+            missionNum += 1;
+            showTutorial(tutorialNum);
             // Debug.Log("mission Num = " + missionNum);
         }
         else {
