@@ -52,6 +52,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
+                        combi.Container.Clear(); //(다원추가)
+                        CombinationObject.ContList.Clear();
                         break;
                     }
                 }
@@ -70,6 +72,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
+                        combi.Container.Clear(); //(다원추가)
+                        CombinationObject.ContList.Clear();
                         break;
                     }
                 }
@@ -88,6 +92,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
+                        combi.Container.Clear(); //(다원추가)
+                        CombinationObject.ContList.Clear();
                         break;
                     }
                 }
