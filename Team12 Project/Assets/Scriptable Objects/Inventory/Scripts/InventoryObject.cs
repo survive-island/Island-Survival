@@ -11,22 +11,16 @@ using UnityEditor;
 public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     public string savePath;//maybe multiple locations
-    public string saveMissionPath;
-
     public ItemDatabaseObject database;
-    public MissionDatabaseObject missionDB;
-
     public List<InventorySlot> Container = new List<InventorySlot>();
 
     private void OnEnable()
     {
 #if UNITY_EDITOR
         database = (ItemDatabaseObject)AssetDatabase.LoadAssetAtPath("Assets/Resources/Database.asset", typeof(ItemDatabaseObject));
-        missionDB = (MissionDatabaseObject)AssetDatabase.LoadAssetAtPath("Assets/Resources/MissionDatabase.asset", typeof(MissionDatabaseObject));
 #else
         database = Resources.Load<ItemDatabaseObject>("Database");
-        missionDB = Resources.Load<MissionDatabaseObject>("MissionDatabase");
-#endif
+#endif 
     }
 
 
@@ -46,26 +40,19 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     public void Save()
     {
         string saveData = JsonUtility.ToJson(this, true);
-        string saveMission = JsonUtility.ToJson(this, true);
-
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
-        FileStream file2 = File.Create(string.Concat(Application.persistentDataPath, saveMissionPath));
         //to save files
         bf.Serialize(file, saveData);
-        bf.Serialize(file2, saveMission);
         file.Close();
     }
     public void Load()
     {
-        if (File.Exists(string.Concat(Application.persistentDataPath, savePath)) && File.Exists(string.Concat(Application.persistentDataPath, saveMissionPath)))
+        if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
-            FileStream file2 = File.Open(string.Concat(Application.persistentDataPath, saveMissionPath), FileMode.Open);
-
             JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
-            JsonUtility.FromJsonOverwrite(bf.Deserialize(file2).ToString(), this);
             file.Close();
         }
     }
@@ -80,7 +67,6 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         {
             Container[i].item = database.GetItem[Container[i].ID];
         }
-        missionDB.mission_num = skipBtn.missionNum;
     }
 }
 
