@@ -19,9 +19,9 @@ public class skipBtn : MonoBehaviour
     public Text missionInstText;
 
     string[] missionExplain = {
-        "\nYou drifted on an uninhabited island.\nTry your best to survive here!",
-        "\nYou built a house, but a sudden storm destroyed the house. T_T\nYou went into a nearby cave to avoid the rain.",
-        "\nNow you got a fire and can use it. \nThe rain stopped, and you got out of the cave!"
+        "\nMISSION 1\nYou drifted on an uninhabited island.\nTry your best to survive here!",
+        "\nMISSION 2\nYou built a house, but a sudden storm destroyed the house. T_T\nYou went into a nearby cave to avoid the rain.",
+        "\nMISSION 3\nNow you got a fire and can use it. \nThe rain stopped, and you got out of the cave!"
     };
 
     void Start()
@@ -30,6 +30,7 @@ public class skipBtn : MonoBehaviour
         if (missionNum == 0)
         { 
             missionNum += 1;
+            Debug.Log("tutorial call");
             showTutorial(tutorialNum);
             // Debug.Log("mission Num = " + missionNum);
         }
@@ -42,6 +43,7 @@ public class skipBtn : MonoBehaviour
 
     void showMission(int i) {
         // missionInstText = missionInstPanel.GetComponent<Text>();
+        instInven.SetActive(false);
         missionInstPanel.SetActive(true);
         missionInstText.text = missionExplain[i - 1];
     }
@@ -74,6 +76,7 @@ public class skipBtn : MonoBehaviour
     public void tutorialBtn() {
         if(tutorialNum == tutorialCnt) {
             hintPanel.SetActive(false);
+            instInven.SetActive(false);
             missionInstPanel.SetActive(true);
             showMission(missionNum);
         }
