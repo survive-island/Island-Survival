@@ -9,6 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public GameObject myHand;
     public GameObject error;
     public static bool haveStick = false;
+    public static int saveCheck = 0; //(다원추가)
 
     private static GameObject tooltip;
     public GameObject tooltipObject;
@@ -66,6 +67,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void saveGame()
     {
+        saveCheck = skipBtn.missionNum; //(다원추가)
         inventory.Save();
     }
     public void loadGame()

@@ -28,7 +28,7 @@ public class nextBtn_M_success : MonoBehaviour
             nextBtn.SetActive(false);
             completeBtn.SetActive(true);
             msgText.text = "Mission Complete!";
-            skipBtn.missionNum = 0;
+            //skipBtn.missionNum = 0;
         }
 
         switch(skipBtn.missionNum) {
@@ -46,10 +46,8 @@ public class nextBtn_M_success : MonoBehaviour
                 M2Obj.SetActive(false);
                 M3Obj.SetActive(true);
                 canvasImg.sprite = S3;
-                break;
-            default :
-                M1Obj.SetActive(true);
-                canvasImg.sprite = S1;
+                skipBtn.missionNum = 0;
+                skipBtn.tutorialNum = 0;
                 break;
 
         }

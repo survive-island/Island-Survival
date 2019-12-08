@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class skipBtn : MonoBehaviour
 {
     static public int missionNum = 0;
-    int tutorialNum = 0;
+    static public int tutorialNum = 0;
     int tutorialCnt = 4;
 
     public GameObject instInven;
@@ -26,9 +26,8 @@ public class skipBtn : MonoBehaviour
     void Start()
     {
         Debug.Log("start mission num = " + missionNum);
-        if(missionNum == 0) {
-            missionNum += 1;
-            showTutorial(tutorialNum);
+        if (missionNum == 0)
+        {              missionNum += 1;             showTutorial(tutorialNum);
             // Debug.Log("mission Num = " + missionNum);
         }
         else {
@@ -36,7 +35,6 @@ public class skipBtn : MonoBehaviour
             showMission(missionNum);
         }
         Debug.Log("end mission num = " + missionNum);
-        // missionNum = 0; //(다원추가)restart할 때 다시 시작하게 하기위해
     }
 
     // Update is called once per frame

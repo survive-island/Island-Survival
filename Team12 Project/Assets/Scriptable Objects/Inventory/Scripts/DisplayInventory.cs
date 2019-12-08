@@ -10,6 +10,11 @@ public class DisplayInventory : MonoBehaviour
 
     void Start()
     {
+        //세이브, 로드 고려해서 새로운 미션으로 넘어갈 때 인벤토리 비우기
+        if (LoadScene.loadcheck == true && PlayerInventory.saveCheck == skipBtn.missionNum) //(다원추가)
+        {             LoadScene.loadcheck = false;         }
+        else
+        {             inventory.Container.Clear();         } 
         CreateDisplay();
     }
 

@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     public InventoryObject inventory;
+    public static bool loadcheck = false; //(다원추가)
 
     public void LoadingScene(string sceneName)
     {
-        skipBtn.missionNum = 2;
         SceneManager.LoadScene(sceneName);
+        loadcheck = true; //(다원추가)
+        Debug.Log(skipBtn.missionNum);
         inventory.Load();
     }
 }

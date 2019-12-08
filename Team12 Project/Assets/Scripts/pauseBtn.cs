@@ -26,6 +26,8 @@ public class pauseBtn : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        skipBtn.missionNum = 0; //(다원추가)
+        skipBtn.tutorialNum = 0;
         SceneManager.LoadScene(sceneName);
         Resume();
     }

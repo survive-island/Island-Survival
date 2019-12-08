@@ -44,6 +44,7 @@ public class hpBar : MonoBehaviour
         }
         if(Fuse.isMissionSuccess) {
             Debug.Log("Mission Success in HP Bar!!");
+            CombinationObject.ContList.Clear();
             Fuse.isMissionSuccess = false;
             SceneManager.LoadScene("missionSuccess");
         }
