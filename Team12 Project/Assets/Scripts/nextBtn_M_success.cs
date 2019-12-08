@@ -23,6 +23,7 @@ public class nextBtn_M_success : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale=1;
         if(skipBtn.missionNum == 3) {
             nextBtn.SetActive(false);
             completeBtn.SetActive(true);
