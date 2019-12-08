@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -26776,7 +26776,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -26899,7 +26899,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -31443,7 +31443,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -31566,7 +31566,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -32686,7 +32686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff5b1f04dece7440b6f0886ee13f147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
+  Camera: {fileID: 1277248927}
   FollowCamera: 1
   RainSoundLight: {fileID: 8300000, guid: c980eda1ec9b9ff4b930005976b00f41, type: 3}
   RainSoundMedium: {fileID: 8300000, guid: 3359e9d10af08ca46ae396298dbd1ed9, type: 3}
@@ -32791,8 +32791,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529806754}
   m_LocalRotation: {x: 0.47744888, y: 0.014687641, z: 0.03007746, w: 0.8780218}
-  m_LocalPosition: {x: 0, y: 0, z: -120.5178}
-  m_LocalScale: {x: 0.0898212, y: 0.0884364, z: 0.093886}
+  m_LocalPosition: {x: 0, y: 0, z: -119.34}
+  m_LocalScale: {x: 0.06717727, y: 0.06268724, z: 0.093886}
   m_Children:
   - {fileID: 332443341}
   - {fileID: 184333958}
@@ -32804,8 +32804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 56.881, y: 5.726, z: 7.027}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.925537, y: 2.256298}
-  m_SizeDelta: {x: 191.4779, y: 106.729004}
+  m_AnchoredPosition: {x: 10.820034, y: 3.960001}
+  m_SizeDelta: {x: 191.47794, y: 106.729004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529806756
 MonoBehaviour:
