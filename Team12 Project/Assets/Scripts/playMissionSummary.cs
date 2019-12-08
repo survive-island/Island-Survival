@@ -14,13 +14,13 @@ public class playMissionSummary : MonoBehaviour
     {
         switch(skipBtn.missionNum) {
             case 1 :
-                summary.text = "A cold wave is coming.\nProtect yourself from the cold!";
+                summary.text = "\nYou need a place to live. \nMake a tree house and take a rest.";
                 break;
             case 2 :
-                summary.text = "mission 2 summary";
+                summary.text = "\nYou are shivering in the cold. \nMake a fire and try to become warm!";
                 break;
             case 3 :
-                summary.text = "mission 3 summary";
+                summary.text = "\nYou're starting to get hungry. \nBake the food, and fill up your hunger!";
                 break;
         }
         numberImg.sprite = imgSlots[skipBtn.missionNum - 1];

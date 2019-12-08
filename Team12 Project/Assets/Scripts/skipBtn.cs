@@ -8,19 +8,20 @@ public class skipBtn : MonoBehaviour
 {
     static public int missionNum = 0;
     static public int tutorialNum = 0;
-    int tutorialCnt = 4;
+    int tutorialCnt = 5;
 
     public GameObject instInven;
     public GameObject instItemsGrab;
     public GameObject instCombination;
     public GameObject instLife;
+    public GameObject hintPanel;
     public GameObject missionInstPanel;
     public Text missionInstText;
 
     string[] missionExplain = {
-        "mission 1",
-        "mission 2",
-        "mission 3"
+        "\nYou drifted on an uninhabited island.\nTry your best to survive here!",
+        "\nYou built a house, but a sudden storm destroyed the house. T_T\nYou went into a nearby cave to avoid the rain.",
+        "\nNow you got a fire and can use it. \nThe rain stopped, and you got out of the cave!"
     };
 
     void Start()
@@ -37,12 +38,6 @@ public class skipBtn : MonoBehaviour
             showMission(missionNum);
         }
         Debug.Log("end mission num = " + missionNum);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void showMission(int i) {
@@ -68,13 +63,17 @@ public class skipBtn : MonoBehaviour
                 instCombination.SetActive(false);
                 instLife.SetActive(true);
                 break;
+            case 4:
+                instLife.SetActive(false);
+                hintPanel.SetActive(true);
+                break;
         }
         tutorialNum += 1;
     }
 
     public void tutorialBtn() {
         if(tutorialNum == tutorialCnt) {
-            instLife.SetActive(false);
+            hintPanel.SetActive(false);
             missionInstPanel.SetActive(true);
             showMission(missionNum);
         }
