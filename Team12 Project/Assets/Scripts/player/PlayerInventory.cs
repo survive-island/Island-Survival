@@ -82,6 +82,13 @@ public class PlayerInventory : MonoBehaviour
     public void pickFish(GameObject gameobject)
     {
         var item = gameobject.GetComponent<Item>();
+        for (int i = 0; i < inventory.Container.Count; i++)
+        {
+            if (inventory.Container[i].ID == 8)
+            {
+                haveStick = true;
+            }
+        }
         if (item && haveStick)
         {
             SoundManager.instance.PlayGrabSound();

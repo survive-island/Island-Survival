@@ -12,6 +12,7 @@ public class playMissionSummary : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerInventory.haveStick = false;
         switch(skipBtn.missionNum) {
             case 1 :
                 summary.text = "\nYou need a place to live. \nMake a tree house and take a rest.";
