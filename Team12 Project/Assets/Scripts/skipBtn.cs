@@ -19,9 +19,9 @@ public class skipBtn : MonoBehaviour
     public Text missionInstText;
 
     string[] missionExplain = {
-        "\nMISSION 1\nYou drifted on an uninhabited island.\nTry your best to survive here!",
-        "\nMISSION 2\nYou built a house, but a sudden storm destroyed the house. T_T\nYou went into a nearby cave to avoid the rain.",
-        "\nMISSION 3\nNow you got a fire and can use it. \nThe rain stopped, and you got out of the cave!"
+        "MISSION 1\n\nYou drifted on an uninhabited island.\nTry your best to survive here!",
+        "MISSION 2\n\nYou built a house, but a sudden storm\ndestroyed the house. T_T\nYou went into a nearby cave to avoid the rain.",
+        "MISSION 3\n\nNow you got a fire and can use it. \nThe rain stopped, and you got out of the cave!"
     };
 
     void Start()

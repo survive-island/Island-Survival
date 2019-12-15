@@ -14,6 +14,7 @@ public class PlayerCombination : MonoBehaviour
             var item = gameobject.GetComponent<Item>();
             if (item){
                 if(combi.Container.Count < 3) {
+                    SoundManager.instance.PlayClickSound();
                     combi.AddItem(item.item, 1);
                     //Destroy(gameobject);
                     Debug.Log(gameobject.name);

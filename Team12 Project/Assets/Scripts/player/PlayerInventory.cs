@@ -30,6 +30,7 @@ public class PlayerInventory : MonoBehaviour
         var item = gameobject.GetComponent<Item>();
         if (item)
         {
+            SoundManager.instance.PlayGrabSound();
             inventory.AddItem(item.item, 1);
             Destroy(gameobject);
         }

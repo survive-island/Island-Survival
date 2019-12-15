@@ -25,6 +25,7 @@ public class hpBar : MonoBehaviour
     {
         if(Fuse.isMissionFail) {
             Debug.Log("mission clear value is false");
+            SoundManager.instance.PlayDamageSound();
             health -= 20;
             
             healthBar.fillAmount = health / maxHealth;
