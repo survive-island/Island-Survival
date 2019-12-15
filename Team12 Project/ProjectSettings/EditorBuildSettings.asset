@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerDie.unity
     guid: c3bb07393eacf4fd7b0c3ad63f78781c
-  - enabled: 1
-    path: Assets/Scenes/missionSuccess.unity
-    guid: 824ecb1a5c2187d44a2517b7714c4c55
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
