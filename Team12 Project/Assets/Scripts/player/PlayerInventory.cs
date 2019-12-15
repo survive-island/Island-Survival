@@ -7,7 +7,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
     public GameObject myHand;
-    public GameObject error;
+    public GameObject error_msg;
     public static bool haveStick = false;
     public static int saveCheck = 0; //(다원추가)
 
@@ -17,12 +17,14 @@ public class PlayerInventory : MonoBehaviour
     private static TextMeshProUGUI sizeText;
     public TextMeshProUGUI visualTextObject;
     private static TextMeshProUGUI visualText;
+    private static GameObject errormessage;
 
     void Start()
     {
         tooltip = tooltipObject;
         sizeText = sizeTextObject;
         visualText = visualTextObject;
+        errormessage = error_msg;
     }
 
     public void putItem(GameObject gameobject)
@@ -85,6 +87,7 @@ public class PlayerInventory : MonoBehaviour
             SoundManager.instance.PlayGrabSound();
             inventory.AddItem(item.item, 1);
             Destroy(gameobject);
+
             //item.GetComponent<Collider>().isTrigger = true;
             //item.GetComponent<Rigidbody>().useGravity = false;
             //item.transform.SetParent(myHand.transform);
@@ -98,8 +101,8 @@ public class PlayerInventory : MonoBehaviour
         else if (item && !haveStick)
         {
             SoundManager.instance.PlayErrorSound();
-            messageState.messageNum = 1;
-            error.SetActive(true);
+            Debug.Log("X have stick!");
+            errormessage.SetActive(true);
         }
     }
 

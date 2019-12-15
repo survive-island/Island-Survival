@@ -12,6 +12,7 @@ TagManager:
   - Terrain
   - Trader
   - minimapCamera
+  - ErrorMsg
   layers:
   - Default
   - TransparentFX
