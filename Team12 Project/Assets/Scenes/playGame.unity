@@ -45153,7 +45153,7 @@ RectTransform:
   - {fileID: 1905613885}
   - {fileID: 480411573}
   m_Father: {fileID: 1422978194}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -51958,7 +51958,7 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
-      value: 0.058309235
+      value: 0.06948248
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
@@ -51983,12 +51983,12 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.21606763
+      value: 0.27193004
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
-      value: 0.54074097
+      value: 0.61901855
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
@@ -52013,12 +52013,12 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].time
-      value: 0.45146814
+      value: 0.49616113
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].value
-      value: 0.2418518
+      value: 0.365448
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
@@ -52033,12 +52033,12 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].time
-      value: 0.7040227
+      value: 0.72077686
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].value
-      value: 0.11816406
+      value: 0.1593628
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
@@ -52073,7 +52073,7 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
-      value: 0.95111084
+      value: 0.96759033
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
@@ -69269,7 +69269,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1422978194}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -70104,7 +70104,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1422978194}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -77266,7 +77266,6 @@ RectTransform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1428350362}
-  - {fileID: 1437537580}
   - {fileID: 1217563351}
   - {fileID: 1242756480}
   - {fileID: 660834639}
@@ -77736,83 +77735,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -5354107936887969441, guid: dcf0533f61ce45d41a81252f0bd03daf, type: 3}
---- !u!1 &1437537579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1437537580}
-  - component: {fileID: 1437537582}
-  - component: {fileID: 1437537581}
-  m_Layer: 5
-  m_Name: Sound effect Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1437537580
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437537579}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 380}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1422978194}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -43}
-  m_SizeDelta: {x: 250, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1437537581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437537579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 4eedafad5084240419e649245c7b2093, type: 3}
-    m_FontSize: 23
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 117
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Sound effect volume
---- !u!222 &1437537582
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437537579}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1437538469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106264,7 +106186,7 @@ RectTransform:
   - {fileID: 1006713188}
   - {fileID: 1973321002}
   m_Father: {fileID: 1422978194}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
