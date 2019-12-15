@@ -11,19 +11,19 @@ public class Fuse : MonoBehaviour
     {
     new int[] {0, 16, 18} , new int[] {6, 16, 18} , new int[] {2, 16, 18} ,
     new int[] {13, 16, 18}, new int[] {4, 19, 13}, new int[] {0, 16}, new int[] {6, 16},
-    new int[] {0, 4, 19} , new int[] {4, 6, 19} , new int[] {2, 4, 19} , 
+    new int[] {0, 4, 19} , new int[] {4, 6, 19} , new int[] {2, 4, 19} ,
     new int[] {2, 16}, new int[] {13, 16}
     };
     public static int[][] Two = new int[10][]
     {
     new int[] {18, 20, 21} , new int[] {18, 20, 22} , new int[] {20, 21} ,
     new int[] {20, 22} , new int[] {20, 23, 24}, new int[] {6, 18, 21}, new int[] {6, 18, 22},
-    new int[] {21}, new int[] {6, 22}, new int[] {6, 23, 24}
+    new int[] {6, 21}, new int[] {6, 22}, new int[] {6, 23, 24}
     };
-    public static int[][] Three = new int[7][]
+    public static int[][] Three = new int[6][]
     {
-    new int[] {3, 8, 9} , new int[] {3, 7, 9} , new int[] {8, 9, 25} , new int[] {8, 9, 25},
-    new int[] {3, 9, 26}, new int[] {9, 25, 26}, new int[] {16}
+    new int[] {3, 8, 9} , new int[] {3, 7, 9} , new int[] {8, 9, 25} , new int[] {7, 9, 25},
+    new int[] {3, 9, 26}, new int[] {9, 25, 26}
     };
 
     public CombinationObject combi;
@@ -85,7 +85,7 @@ public class Fuse : MonoBehaviour
             }
             else if (skipBtn.missionNum == 3)
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     pass = CheckListEquals(CombinationObject.ContList, Three[i]);
                     if (pass == true)
