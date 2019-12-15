@@ -11,6 +11,7 @@ TagManager:
   - Interactable
   - Terrain
   - Trader
+  - minimapCamera
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - CraftableItem
   - Player
   - Gajos
-  - 
+  - miniIcons
   - 
   - 
   - 
