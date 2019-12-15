@@ -940,9 +940,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2025634816}
-  audioClipGrab: {fileID: 8300000, guid: 9db635cdbb2ea884c802d8c0e4eed6dc, type: 3}
-  audioClipClick: {fileID: 8300000, guid: 1534fc1c46699bd43ac431c838acf6eb, type: 3}
-  audioClipDamage: {fileID: 8300000, guid: c461b547b9c507c42b617904589eaa13, type: 3}
+  audioClipGrab: {fileID: 8300000, guid: 7806a9d7e23850349b63f84de67ac58e, type: 3}
+  audioClipClick: {fileID: 8300000, guid: aceac78fabbe5f743bce35176e370fdb, type: 3}
+  audioClipDamage: {fileID: 8300000, guid: 31b85c466e83bf5458ed117cf88de6f3, type: 3}
   audioClipBeep: {fileID: 8300000, guid: 5f0f45216ca084c428df04c0f04b1621, type: 3}
   audioClipButton: {fileID: 8300000, guid: 3c599d5cba0b84aa7a71f2509aede964, type: 3}
 --- !u!4 &265744706

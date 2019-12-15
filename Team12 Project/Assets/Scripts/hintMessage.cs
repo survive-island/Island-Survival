@@ -46,7 +46,7 @@ public class hintMessage : MonoBehaviour
         }
         else if (skipBtn.missionNum == 3) //3-normal
         {
-            contentText.text = "<color=black>You need the </color><color=red>tools to grill food on fire. </color>\n <color=black>tools : spear, can, bucket</ color>";
+            contentText.text = "<color=black>You need the </color><color=red>tools to grill food on fire. </color>\n <color=black>tools : spear, can, bucket</color>";
         }
         else
         {

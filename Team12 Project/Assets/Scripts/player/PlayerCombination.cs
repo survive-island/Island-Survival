@@ -10,6 +10,7 @@ public class PlayerCombination : MonoBehaviour
     public void Start()
     {
         combi.Container.Clear(); //(다원추가)
+        CombinationObject.ContList.Clear();
     }
 
     public void putItem(GameObject gameobject)

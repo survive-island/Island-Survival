@@ -69,7 +69,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void saveGame()
     {
-        saveCheck = skipBtn.missionNum; //(다원추가)
+        //saveCheck = skipBtn.missionNum; //(다원추가)
         inventory.Save();
     }
     public void loadGame()

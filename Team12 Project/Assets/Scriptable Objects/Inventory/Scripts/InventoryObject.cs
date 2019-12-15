@@ -11,7 +11,7 @@ using UnityEditor;
 public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     public string savePath;//maybe multiple locations
-    public ItemDatabaseObject database;
+    private ItemDatabaseObject database;
     public List<InventorySlot> Container = new List<InventorySlot>();
 
     private void OnEnable()
@@ -33,7 +33,7 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
                 return;
             }
         }
-        Container.Add(new InventorySlot(database.GetId[_item], _item, _amount, skipBtn.missionNum));
+        Container.Add(new InventorySlot(database.GetId[_item], _item, _amount));
     }
 
     public void Save()
@@ -44,12 +44,10 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         //to save files
         bf.Serialize(file, saveData);
         file.Close();
-        Debug.Log("mission save num 1 "+InventorySlot.mission_n);
-        Debug.Log("mission save num 2 " + skipBtn.missionNum);
     }
+
     public void Load()
     {
-        Debug.Log("loading " + InventorySlot.mission_n);
         if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {
             BinaryFormatter bf = new BinaryFormatter();
@@ -61,7 +59,6 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnBeforeSerialize()
     {
-        Debug.Log("onbefore " + InventorySlot.mission_n);
     }
 
     public void OnAfterDeserialize()
@@ -70,8 +67,6 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         {
             Container[i].item = database.GetItem[Container[i].ID];
         }
-        InventorySlot.mission_n = skipBtn.missionNum;
-        Debug.Log("onafter " + InventorySlot.mission_n);
     }
 }
 
@@ -81,14 +76,12 @@ public class InventorySlot
     public int ID;
     public ItemObject item;
     public int amount;
-    public static int mission_n;
 
-    public InventorySlot(int _id, ItemObject _item, int _amount, int _mission)
+    public InventorySlot(int _id, ItemObject _item, int _amount)
     {
         ID = _id;
         item = _item;
         amount = _amount;
-        _mission = mission_n;
     }
     public void AddAmount(int value)
     {
