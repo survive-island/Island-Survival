@@ -54,6 +54,7 @@ public class PlayerInventory : MonoBehaviour
         var item = gameobject.GetComponent<Item>();
         if (item)
         {
+            SoundManager.instance.PlayGrabSound();
             inventory.AddItem(item.item, 1);
             item.GetComponent<Collider>().isTrigger = true;
             item.GetComponent<Rigidbody>().useGravity = false;
@@ -81,19 +82,22 @@ public class PlayerInventory : MonoBehaviour
         var item = gameobject.GetComponent<Item>();
         if (item && haveStick)
         {
+            SoundManager.instance.PlayGrabSound();
             inventory.AddItem(item.item, 1);
-            item.GetComponent<Collider>().isTrigger = true;
-            item.GetComponent<Rigidbody>().useGravity = false;
-            item.transform.SetParent(myHand.transform);
-            item.transform.localPosition = new Vector3(0.009399922f, 0.01299987f, 0.03560022f);//put it under arms
-            item.transform.localRotation = Quaternion.Euler(-8.024f, -519.681f, -0.021f);
-            item.transform.localScale = new Vector3(0.008015299f, 0.004941517f, 0.005079972f);
-            item.GetComponent<Rigidbody>().mass = 0;
-            item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX |
-                RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+            Destroy(gameobject);
+            //item.GetComponent<Collider>().isTrigger = true;
+            //item.GetComponent<Rigidbody>().useGravity = false;
+            //item.transform.SetParent(myHand.transform);
+            //item.transform.localPosition = new Vector3(0.009399922f, 0.01299987f, 0.03560022f);//put it under arms
+            //item.transform.localRotation = Quaternion.Euler(-8.024f, -519.681f, -0.021f);
+            //item.transform.localScale = new Vector3(0.008015299f, 0.004941517f, 0.005079972f);
+            //item.GetComponent<Rigidbody>().mass = 0;
+            //item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX |
+            //  RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
         }
         else if (item && !haveStick)
         {
+            SoundManager.instance.PlayErrorSound();
             messageState.messageNum = 1;
             error.SetActive(true);
         }

@@ -11,24 +11,17 @@ using UnityEditor;
 public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     public string savePath;//maybe multiple locations
-    public string saveMissionPath;
-
     public ItemDatabaseObject database;
-    public MissionDatabaseObject missionDB;
-
     public List<InventorySlot> Container = new List<InventorySlot>();
 
     private void OnEnable()
     {
 #if UNITY_EDITOR
         database = (ItemDatabaseObject)AssetDatabase.LoadAssetAtPath("Assets/Resources/Database.asset", typeof(ItemDatabaseObject));
-        missionDB = (MissionDatabaseObject)AssetDatabase.LoadAssetAtPath("Assets/Resources/MissionDatabase.asset", typeof(MissionDatabaseObject));
 #else
         database = Resources.Load<ItemDatabaseObject>("Database");
-        missionDB = Resources.Load<MissionDatabaseObject>("MissionDatabase");
 #endif
     }
-
 
     public void AddItem(ItemObject _item, int _amount)
     {
@@ -40,38 +33,35 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
                 return;
             }
         }
-        Container.Add(new InventorySlot(database.GetId[_item], _item, _amount));
+        Container.Add(new InventorySlot(database.GetId[_item], _item, _amount, skipBtn.missionNum));
     }
 
     public void Save()
     {
         string saveData = JsonUtility.ToJson(this, true);
-        string saveMission = JsonUtility.ToJson(this, true);
-
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
-        FileStream file2 = File.Create(string.Concat(Application.persistentDataPath, saveMissionPath));
         //to save files
         bf.Serialize(file, saveData);
-        bf.Serialize(file2, saveMission);
         file.Close();
+        Debug.Log("mission save num 1 "+InventorySlot.mission_n);
+        Debug.Log("mission save num 2 " + skipBtn.missionNum);
     }
     public void Load()
     {
-        if (File.Exists(string.Concat(Application.persistentDataPath, savePath)) && File.Exists(string.Concat(Application.persistentDataPath, saveMissionPath)))
+        Debug.Log("loading " + InventorySlot.mission_n);
+        if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
-            FileStream file2 = File.Open(string.Concat(Application.persistentDataPath, saveMissionPath), FileMode.Open);
-
             JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
-            JsonUtility.FromJsonOverwrite(bf.Deserialize(file2).ToString(), this);
             file.Close();
         }
     }
 
     public void OnBeforeSerialize()
     {
+        Debug.Log("onbefore " + InventorySlot.mission_n);
     }
 
     public void OnAfterDeserialize()
@@ -80,6 +70,8 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         {
             Container[i].item = database.GetItem[Container[i].ID];
         }
+        InventorySlot.mission_n = skipBtn.missionNum;
+        Debug.Log("onafter " + InventorySlot.mission_n);
     }
 }
 
@@ -89,11 +81,14 @@ public class InventorySlot
     public int ID;
     public ItemObject item;
     public int amount;
-    public InventorySlot(int _id, ItemObject _item, int _amount)
+    public static int mission_n;
+
+    public InventorySlot(int _id, ItemObject _item, int _amount, int _mission)
     {
         ID = _id;
         item = _item;
         amount = _amount;
+        _mission = mission_n;
     }
     public void AddAmount(int value)
     {

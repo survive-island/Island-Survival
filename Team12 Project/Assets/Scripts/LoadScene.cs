@@ -10,9 +10,9 @@ public class LoadScene : MonoBehaviour
 
     public void LoadingScene(string sceneName)
     {
+        Debug.Log("now mission num is" + skipBtn.missionNum);
+        inventory.Load();
         SceneManager.LoadScene(sceneName);
         loadcheck = true; //(다원추가)
-        Debug.Log(skipBtn.missionNum);
-        inventory.Load();
     }
 }

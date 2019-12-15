@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip audioClipGrab;
     public AudioClip audioClipClick;
     public AudioClip audioClipDamage;
+    public AudioClip audioClipBeep;
     public static SoundManager instance;
 
     private void Awake()
@@ -29,5 +30,9 @@ public class SoundManager : MonoBehaviour
     public void PlayDamageSound()
     {
         audioSource.PlayOneShot(audioClipDamage);
+    }
+    public void PlayErrorSound()
+    {
+        audioSource.PlayOneShot(audioClipBeep);
     }
 }
