@@ -89,4 +89,11 @@ public class skipBtn : MonoBehaviour
         // go to play scene!
         SceneManager.LoadScene(sceneName);
     }
+
+    public void ChangeSceneAfterDie(string sceneName) {
+        // go to play scene!
+        Debug.Log("die mission num = " + missionNum);
+        missionNum -= 1;
+        SceneManager.LoadScene(sceneName);
+    }
 }
