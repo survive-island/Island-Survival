@@ -43,7 +43,7 @@ public class Fuse : MonoBehaviour
 
         if (CombinationObject.ContList.Count != 0)
         {
-            if (skipBtn.missionNum == 1) //소망이가 바꿔쓰면되는 부분
+            if (skipBtn.missionNum == 1)
             {
                 for (int i = 0; i < 12; i++)
                 {
@@ -52,8 +52,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
-                        combi.Container.Clear(); //(다원추가)
-                        CombinationObject.ContList.Clear();
+                        //combi.Container.Clear(); //(다원추가)
+                        //CombinationObject.ContList.Clear();
                         break;
                     }
                 }
@@ -63,7 +63,7 @@ public class Fuse : MonoBehaviour
                     isMissionFail = true;
                 }
             }
-            else if (skipBtn.missionNum == 2) //소망이가 바꿔쓰면되는 부분
+            else if (skipBtn.missionNum == 2)
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -72,8 +72,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
-                        combi.Container.Clear(); //(다원추가)
-                        CombinationObject.ContList.Clear();
+                        //combi.Container.Clear(); //(다원추가)
+                        //CombinationObject.ContList.Clear();
                         break;
                     }
                 }
@@ -83,7 +83,7 @@ public class Fuse : MonoBehaviour
                     isMissionFail = true;
                 }
             }
-            else if (skipBtn.missionNum == 3) //소망이가 바꿔쓰면되는 부분
+            else if (skipBtn.missionNum == 3)
             {
                 for (int i = 0; i < 7; i++)
                 {
@@ -92,8 +92,8 @@ public class Fuse : MonoBehaviour
                     {
                         Debug.Log("success @ O @");
                         isMissionSuccess = true;
-                        combi.Container.Clear(); //(다원추가)
-                        CombinationObject.ContList.Clear();
+                        //combi.Container.Clear(); //(다원추가)
+                        //CombinationObject.ContList.Clear();
                         break;
                     }
                 }
@@ -106,6 +106,7 @@ public class Fuse : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.ButtonClickSound();
             Debug.Log("------------nothing");
         }
     }

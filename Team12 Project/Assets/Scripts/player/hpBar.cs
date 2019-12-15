@@ -38,12 +38,14 @@ public class hpBar : MonoBehaviour
                 // TODO : playerDie 씬으로 넘기기!
                 SceneManager.LoadScene("PlayerDie");
                 Debug.Log("game end!! - Die");
-            }else {
+            }
+            else {
                 Debug.Log("Mission Fail but no die");
                 // TODO : Mission Combination Fail Panel 띄워주기
             }
         }
         if(Fuse.isMissionSuccess) {
+            SoundManager.instance.ButtonClickSound();
             Debug.Log("Mission Success in HP Bar!!");
             Fuse.isMissionSuccess = false;
             SceneManager.LoadScene("missionSuccess");

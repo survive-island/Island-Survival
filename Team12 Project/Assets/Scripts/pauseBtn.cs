@@ -46,6 +46,7 @@ public class pauseBtn : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.ButtonClickSound();
             settingMode();
         }
     }
@@ -58,6 +59,7 @@ public class pauseBtn : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.ButtonClickSound();
             hintMode();
         }
     }
@@ -91,6 +93,7 @@ public class pauseBtn : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.ButtonClickSound();
             Pause();
         }
     }
@@ -119,6 +122,7 @@ public class pauseBtn : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.ButtonClickSound();
             combiMode();
         }
     }

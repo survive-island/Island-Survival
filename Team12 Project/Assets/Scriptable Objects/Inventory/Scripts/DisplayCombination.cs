@@ -56,6 +56,7 @@ public class DisplayCombination : MonoBehaviour
     }
 
     public void clickResetBtn() {
+        SoundManager.instance.ButtonClickSound();
         Debug.Log("here");
         isClickedReset = true;
         UpdateDisplay();

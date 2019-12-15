@@ -75,18 +75,21 @@ public class skipBtn : MonoBehaviour
 
     public void tutorialBtn() {
         if(tutorialNum == tutorialCnt) {
+            SoundManager.instance.ButtonClickSound();
             hintPanel.SetActive(false);
             instInven.SetActive(false);
             missionInstPanel.SetActive(true);
             showMission(missionNum);
         }
         else {
+            SoundManager.instance.ButtonClickSound();
             showTutorial(tutorialNum);
         }
     }
 
     public void ChangeScene(string sceneName) {
         // go to play scene!
+        SoundManager.instance.ButtonClickSound();
         SceneManager.LoadScene(sceneName);
     }
 

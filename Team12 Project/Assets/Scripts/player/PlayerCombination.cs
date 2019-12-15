@@ -7,6 +7,11 @@ public class PlayerCombination : MonoBehaviour
     public CombinationObject combi;
     public static bool invenItemClicked = false;
 
+    public void Start()
+    {
+        combi.Container.Clear(); //(다원추가)
+    }
+
     public void putItem(GameObject gameobject)
     {
         if (pauseBtn.isCombination)

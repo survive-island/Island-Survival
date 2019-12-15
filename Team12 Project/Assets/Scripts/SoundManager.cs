@@ -5,10 +5,13 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip audioClipGrab;
-    public AudioClip audioClipClick;
-    public AudioClip audioClipDamage;
-    public AudioClip audioClipBeep;
+
+    public AudioClip audioClipGrab; //물건 집을 때
+    public AudioClip audioClipClick; //인벤토리 클릭할 때
+    public AudioClip audioClipDamage; //Hp 줄을 때
+    public AudioClip audioClipBeep; //에러 뜰 때
+    public AudioClip audioClipButton; //버튼 클릭할 때
+
     public static SoundManager instance;
 
     private void Awake()
@@ -34,5 +37,9 @@ public class SoundManager : MonoBehaviour
     public void PlayErrorSound()
     {
         audioSource.PlayOneShot(audioClipBeep);
+    }
+    public void ButtonClickSound()
+    {
+        audioSource.PlayOneShot(audioClipButton);
     }
 }
